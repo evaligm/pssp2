@@ -22,5 +22,8 @@ node {
 		}	
 		 /* Push the container to the custom Registry */
         		echo "push docker build to dockerhub"
+		
+		/* clean workspace */
+		cleanWs()
                }
 }
