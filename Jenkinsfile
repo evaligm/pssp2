@@ -10,18 +10,5 @@ node {
 		app = docker.build("evaligm/psspimg4")
 	}
 
-	stage('Test image') {
-		app.inside { echo "tests passed" }
 	}
-
-
-	stage('Push image')  { 
-    		docker.withRegistry('https://registry.hub.docker.com', 'Dochub') {
-        		app.push("${env.BUILD_NUMBER}")
-		app.push("latest")
-		}	
-		 /* Push the container to the custom Registry */
-        		echo "push docker build to dockerhub"
-               }
-}
 
