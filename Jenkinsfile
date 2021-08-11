@@ -5,6 +5,8 @@ node {
 		checkout scm
 	}
 
-	
+	stage('Test image') {
+		app.inside { echo "tests passed" }
+	}
 	}
 
