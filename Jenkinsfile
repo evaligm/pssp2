@@ -5,14 +5,6 @@ node {
 		checkout scm
 	}
 
-	stage('Build image') {
-		/* this build the image */
-		/*app = docker.build("evaligm/psspimg4") */
-	}
-
-	stage('Test image') {
-		app.inside { echo "tests passed" }
-	}
-
+	
 	}
 
